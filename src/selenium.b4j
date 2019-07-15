@@ -4,12 +4,13 @@ Group=Default Group
 Library1=jcore
 Library2=jfx
 Library3=javaobject
+Library4=selenium
 Module1=WebDriver
 Module2=By
 Module3=WebElement
 Module4=DriverNavigate
 NumberOfFiles=0
-NumberOfLibraries=3
+NumberOfLibraries=4
 NumberOfModules=4
 Version=7.51
 @EndOfDesignText@
@@ -17,8 +18,6 @@ Version=7.51
 	#MainFormWidth: 600
 	#MainFormHeight: 600 
 #End Region
-
-#AdditionalJar: selenium-server-standalone-3.4.0
 
 Sub Process_Globals
 	Private fx As JFX
@@ -32,11 +31,7 @@ Sub AppStart (Form1 As Form, Args() As String)
 	MainForm.Show
 	
 	driver.Initialize("d://chromedriver.exe")
-	driver.Get("http://162.105.134.188/pdfindex.jsp?fid=c54fedd7ab7901cbacd09d5f4fdac124&xyz=0.7909188656409809")
-	Sleep(2000)
-	For Each we As WebElement In driver.findElements(By.className("chapter-name"))
-		we.click
-	Next
+	searchYCY
 End Sub
 
 Sub searchYCY

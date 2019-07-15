@@ -46,6 +46,10 @@ Public Sub findElements(objBy As Object) As List
 	Return list1
 End Sub
 
+Sub asJO As JavaObject
+	Return driver
+End Sub
+
 Sub inline As JavaObject
 	Return Me
 End Sub

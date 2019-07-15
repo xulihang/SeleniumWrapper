@@ -13,6 +13,6 @@ ModuleClosedNodes1=
 ModuleClosedNodes2=
 ModuleClosedNodes3=
 ModuleClosedNodes4=
-NavigationStack=WebDriver,Class_Globals,0,0,WebElement,Class_Globals,0,0,WebElement,getAttribute,12,0,Main,searchYCY,27,0,Main,AppStart,20,6
+NavigationStack=By,initBy,10,0,WebDriver,inline,44,0,WebDriver,findElements,43,0,WebDriver,Class_Globals,2,0,WebDriver,asJO,43,0,DriverNavigate,Class_Globals,0,0,DriverNavigate,goto,10,0,DriverNavigate,refresh,24,0,Main,searchYCY,22,0,Main,AppStart,18,3
 SelectedBuild=0
 VisibleModules=1,2,3,4

@@ -33,3 +33,7 @@ End Sub
 Sub clear
 	objWE.RunMethod("clear", Null)
 End Sub
+
+Sub asJO As JavaObject
+	Return objWE
+End Sub
