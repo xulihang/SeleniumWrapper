@@ -19,7 +19,7 @@ Sub getAttribute(attributeName As String) As Object
 End Sub
 
 Sub sendKeys(text As String)
-	objWE.RunMethod("sendKeys", Array(array as string(text)))
+	objWE.RunMethod("sendKeys", Array(Array As String(text)))
 End Sub
 
 Sub getText(text As String) As String

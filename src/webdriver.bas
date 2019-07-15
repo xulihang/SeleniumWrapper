@@ -46,15 +46,27 @@ Public Sub findElements(objBy As Object) As List
 	Return list1
 End Sub
 
+Sub inline As JavaObject
+	Return Me
+End Sub
+
+Sub asJavascriptExecutor As JavaObject
+	Return inline.RunMethodJO("toJE",Array(driver))
+End Sub
+
 #If JAVA
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;  
-import org.openqa.selenium.chrome.ChromeDriver;  
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.JavascriptExecutor;
 
 
-
+public JavascriptExecutor toJE (WebDriver driver) {
+    JavascriptExecutor jsexecutor = (JavascriptExecutor) driver;
+    return jsexecutor;
+}
 
 public String start() {
     WebDriver driver = new ChromeDriver();

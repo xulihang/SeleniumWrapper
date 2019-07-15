@@ -11,7 +11,7 @@ Module4=DriverNavigate
 NumberOfFiles=0
 NumberOfLibraries=3
 NumberOfModules=4
-Version=7.32
+Version=7.51
 @EndOfDesignText@
 #Region Project Attributes 
 	#MainFormWidth: 600
@@ -31,15 +31,12 @@ Sub AppStart (Form1 As Form, Args() As String)
 	'MainForm.RootPane.LoadLayout("Layout1") 'Load the layout file.
 	MainForm.Show
 	
-	driver.Initialize("e://chromedriver.exe")
-	driver.Get("https://blog.xulihang.me/translate-Excel-files-containing-html/")
-	
-	For Each we As WebElement In driver.findElements(By.tagName("img"))
-		Log(we.getAttribute("src"))
+	driver.Initialize("d://chromedriver.exe")
+	driver.Get("http://162.105.134.188/pdfindex.jsp?fid=c54fedd7ab7901cbacd09d5f4fdac124&xyz=0.7909188656409809")
+	Sleep(2000)
+	For Each we As WebElement In driver.findElements(By.className("chapter-name"))
+		we.click
 	Next
-	driver.navigate.goto("http://www.baidu.com")
-	Sleep(10000)
-	driver.navigate.back
 End Sub
 
 Sub searchYCY
